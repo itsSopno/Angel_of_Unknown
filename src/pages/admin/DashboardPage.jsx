@@ -239,6 +239,11 @@ export default function DashboardPage() {
                       <div className={styles.cardCta}>
                         OPEN ROUTE <FiArrowRight className={styles.arrowRight} />
                       </div>
+
+                      {/* Mobile short label */}
+                      <span className={styles.mobileBeaconLabel}>
+                        {route.id.toUpperCase()}
+                      </span>
                     </div>
                   </button>
                 );
