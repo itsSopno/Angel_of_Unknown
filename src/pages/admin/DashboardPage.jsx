@@ -102,7 +102,7 @@ export default function DashboardPage() {
         <div className={styles.hudLeft}>
           <div className={styles.hudTitleRow}>
             <h1 className={styles.hudTitle}>
-              ORBITAL <span className={styles.hudTitleHighlight}>COMMAND</span> NEXUS
+              ORBITAL <span className={styles.hudTitleHighlight}>OF</span> PORTFOLIO
             </h1>
             <div className={styles.statusPill}>
               <span className={styles.pulseDot} />
