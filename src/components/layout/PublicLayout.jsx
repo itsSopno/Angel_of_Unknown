@@ -1,9 +1,10 @@
 import { Outlet } from 'react-router-dom';
+import OrbNavbar from './OrbNavbar';
 
 const PublicLayout = () => {
   return (
     <div className="public-layout">
-      {/* Navbar এখানে আসবে */}
+      <OrbNavbar />
       <main>
         <Outlet />
       </main>

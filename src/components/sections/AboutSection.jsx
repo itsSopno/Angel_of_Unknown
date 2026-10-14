@@ -116,7 +116,7 @@ export default function AboutSection() {
           </div>
 
           {/* Skills */}
-          <div className={`skills-section ${styles.skillsSection}`}>
+          <div id="skills" className={`skills-section ${styles.skillsSection}`}>
             <p className={styles.skillsTitle}>SKILLS I HAVE</p>
             <div className={styles.skillsGrid} ref={skillsRef}>
               {SKILLS.map(s => (
