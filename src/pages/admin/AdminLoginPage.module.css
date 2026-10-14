@@ -1,0 +1,245 @@
+/* ══ AdminLoginPage.module.css ══════════════════════════════ */
+
+.loginContainer {
+  min-height: 100vh;
+  background: #020306;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(205, 255, 0, 0.08) 0%, transparent 60%),
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+  pointer-events: none;
+}
+
+.loginCard {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background: rgba(10, 12, 18, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 2px solid #cdff00;
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 
+    0 24px 60px rgba(0, 0, 0, 0.9),
+    0 0 35px rgba(205, 255, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.orbHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.orbSphere {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #ffffff 0%, #cdff00 45%, #182800 100%);
+  box-shadow: 0 0 25px rgba(205, 255, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.atomRing {
+  position: absolute;
+  width: 84px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(255, 255, 255, 0.9);
+  transform: rotate(-25deg);
+  animation: spinRing 6s linear infinite;
+}
+
+@keyframes spinRing {
+  0% { transform: rotate(-25deg) rotateZ(0deg); }
+  100% { transform: rotate(-25deg) rotateZ(360deg); }
+}
+
+.shieldIcon {
+  font-size: 1.6rem;
+  color: #000000;
+}
+
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.lime {
+  color: #cdff00;
+}
+
+.subtitle {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.68rem;
+  color: #64748b;
+  letter-spacing: 0.1em;
+  margin: 4px 0 0;
+}
+
+/* ── Form ── */
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+}
+
+.inputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 14px;
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  border-color: #cdff00;
+  box-shadow: 0 0 12px rgba(205, 255, 0, 0.25);
+}
+
+.submitBtn {
+  margin-top: 8px;
+  width: 100%;
+  padding: 13px;
+  background: #cdff00;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.submitBtn:hover {
+  background: #dbff33;
+  box-shadow: 0 0 20px rgba(205, 255, 0, 0.45);
+  transform: translateY(-1px);
+}
+
+.divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 20px 0 14px;
+  color: #475569;
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.divider span {
+  padding: 0 10px;
+}
+
+.demoBtn {
+  width: 100%;
+  padding: 11px;
+  background: rgba(205, 255, 0, 0.08);
+  border: 1px dashed rgba(205, 255, 0, 0.4);
+  color: #cdff00;
+  border-radius: 8px;
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.demoBtn:hover {
+  background: rgba(205, 255, 0, 0.16);
+  border-color: #cdff00;
+  box-shadow: 0 0 16px rgba(205, 255, 0, 0.2);
+}
+
+.backHome {
+  margin-top: 24px;
+  color: #64748b;
+  text-decoration: none;
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  transition: color 0.2s ease;
+}
+
+.backHome:hover {
+  color: #ffffff;
+}
