@@ -69,7 +69,7 @@ export default function AdminLoginPage() {
               <FiMail className={styles.inputIcon} />
               <input
                 type="email"
-                placeholder="admin@nabilhasan.dev"
+                placeholder="nabilbd@portfolio.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className={styles.input}
