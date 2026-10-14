@@ -19,7 +19,7 @@ const AdminLayout = () => {
         <NavLink to="/admin/dashboard" className={styles.brandLink}>
           <div className={styles.miniOrb} />
           <span className={styles.brandText}>
-            NEXUS <span className={styles.brandHighlight}>ORB</span> // ADMIN
+             <span className={styles.brandHighlight}>ORB</span>
           </span>
         </NavLink>
 
