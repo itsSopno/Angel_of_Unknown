@@ -1,0 +1,157 @@
+/* ══ AdminLayout.module.css ═════════════════════════════════ */
+
+.adminWrapper {
+  min-height: 100vh;
+  background: #020306;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Top Sci-Fi Header ──────────────────────────────────────── */
+.adminHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  background: rgba(6, 8, 12, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brandLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #ffffff;
+  outline: none;
+}
+
+.miniOrb {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #cdff00 45%, #182600 100%);
+  box-shadow: 0 0 12px rgba(205, 255, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.miniOrb::after {
+  content: '';
+  position: absolute;
+  width: 36px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transform: rotate(-25deg);
+}
+
+.brandText {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+
+.brandHighlight {
+  color: #cdff00;
+}
+
+/* ── Center Navigation ──────────────────────────────────────── */
+.navRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.navLink:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.navLink.active {
+  color: #cdff00;
+  background: rgba(205, 255, 0, 0.08);
+  border-color: rgba(205, 255, 0, 0.3);
+}
+
+/* ── Right Actions ──────────────────────────────────────────── */
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.publicLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.2s ease;
+}
+
+.publicLink:hover {
+  color: #cdff00;
+  border-color: rgba(205, 255, 0, 0.3);
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #f43f5e;
+  background: rgba(244, 63, 94, 0.08);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logoutBtn:hover {
+  background: #f43f5e;
+  color: #ffffff;
+}
+
+/* ── Main Content Area ──────────────────────────────────────── */
+.adminMain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
