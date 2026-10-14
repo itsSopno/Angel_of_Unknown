@@ -1,5 +1,12 @@
+import HeroSection from '../../components/sections/HeroSection';
+
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <main>
+      <HeroSection />
+      {/* Skills, Projects, Contact sections এখানে আসবে */}
+    </main>
+  );
 };
 
 export default HomePage;
