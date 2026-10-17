@@ -10,6 +10,7 @@ import ProtectedRoute from '../components/common/ProtectedRoute';
 // Public Pages
 import HomePage from '../pages/public/HomePage';
 import NotFoundPage from '../pages/public/NotFoundPage';
+import ProjectDetailPage from '../pages/public/ProjectDetailPage';
 
 // Admin Pages
 import AdminLoginPage from '../pages/admin/AdminLoginPage';
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
     element: <PublicLayout />,
     children: [
       { path: '/', element: <HomePage /> },
+      { path: '/projects/:slug', element: <ProjectDetailPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
   },

@@ -2,6 +2,7 @@ import api from './api';
 
 // ── Projects ─────────────────────────────────────────
 export const getProjects = () => api.get('/projects/project');
+export const getProjectBySlug = (slug) => api.get(`/projects/project/${slug}`);
 export const createProject = (data) => api.post('/projects/project', data);
 export const updateProject = (id, data) => api.put(`/projects/project/${id}`, data);
 export const deleteProject = (id) => api.delete(`/projects/project/${id}`);
