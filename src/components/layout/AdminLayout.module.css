@@ -37,8 +37,8 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #cdff00 45%, #182600 100%);
-  box-shadow: 0 0 12px rgba(205, 255, 0, 0.8);
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #00ff66 45%, #182600 100%);
+  box-shadow: 0 0 12px rgba(30, 255, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,7 +63,7 @@
 }
 
 .brandHighlight {
-  color: #cdff00;
+  color: #00ff66;
 }
 
 /* ── Center Navigation ──────────────────────────────────────── */
@@ -95,9 +95,9 @@
 }
 
 .navLink.active {
-  color: #cdff00;
+  color: #00ff66;
   background: rgba(205, 255, 0, 0.08);
-  border-color: rgba(205, 255, 0, 0.3);
+  border-color: rgba(30, 255, 0, 0.3);
 }
 
 /* ── Right Actions ──────────────────────────────────────────── */
@@ -124,8 +124,8 @@
 }
 
 .publicLink:hover {
-  color: #cdff00;
-  border-color: rgba(205, 255, 0, 0.3);
+  color: #00ff66;
+  border-color: rgba(30, 255, 0, 0.3);
 }
 
 .logoutBtn {

@@ -4,7 +4,7 @@
   position: relative;
   min-height: calc(100vh - 72px);
   background: #020306;
-  background-image: 
+  background-image:
     radial-gradient(circle at 50% 50%, rgba(205, 255, 0, 0.05) 0%, transparent 60%),
     linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
@@ -53,7 +53,7 @@
 }
 
 .hudTitleHighlight {
-  color: #cdff00;
+  color: #00ff66;
 }
 
 .statusPill {
@@ -61,8 +61,8 @@
   align-items: center;
   gap: 6px;
   background: rgba(205, 255, 0, 0.1);
-  border: 1px solid rgba(205, 255, 0, 0.35);
-  color: #cdff00;
+  border: 1px solid rgba(30, 255, 0, 0.3);
+  color: #00ff66;
   font-family: 'Space Grotesk', monospace;
   font-size: clamp(0.58rem, 1.2vw, 0.68rem);
   font-weight: 700;
@@ -76,14 +76,23 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #cdff00;
-  box-shadow: 0 0 8px #cdff00;
+  background: #00ff66;
+  box-shadow: 0 0 8px #00ff66;
   animation: pulse 1.6s infinite ease-in-out;
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 0.5; transform: scale(0.9); }
-  50% { opacity: 1; transform: scale(1.4); }
+
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
 }
 
 .hudSubtitle {
@@ -121,14 +130,14 @@
 
 .controlBtn:hover {
   background: rgba(205, 255, 0, 0.12);
-  border-color: rgba(205, 255, 0, 0.4);
-  color: #cdff00;
+  border-color: rgba(30, 255, 0, 0.3);
+  color: #00ff66;
 }
 
 .controlBtn.active {
-  background: #cdff00;
+  background: #00ff66;
   color: #000000;
-  border-color: #cdff00;
+  border-color: #00ff66;
   font-weight: 700;
 }
 
@@ -172,11 +181,13 @@
   width: calc(var(--arena-size) * 0.58);
   height: calc(var(--arena-size) * 0.58);
 }
+
 .radarCircle2 {
   width: calc(var(--arena-size) * 0.88);
   height: calc(var(--arena-size) * 0.88);
   border-color: rgba(205, 255, 0, 0.06);
 }
+
 .radarCircle3 {
   width: calc(var(--arena-size) * 1.18);
   height: calc(var(--arena-size) * 1.18);
@@ -218,15 +229,22 @@
   width: calc(var(--orb-size) * 1.48);
   height: calc(var(--orb-size) * 1.48);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(205, 255, 0, 0.45) 0%, rgba(205, 255, 0, 0.15) 45%, transparent 72%);
+  background: radial-gradient(circle, rgba(30, 255, 0, 0.3) 0%, rgba(30, 255, 0, 0.3) 45%, transparent 72%);
   filter: blur(calc(var(--orb-size) * 0.12));
   pointer-events: none;
   animation: orbAuraPulse 4s infinite ease-in-out alternate;
 }
 
 @keyframes orbAuraPulse {
-  0% { transform: scale(0.92); opacity: 0.6; }
-  100% { transform: scale(1.15); opacity: 1; }
+  0% {
+    transform: scale(0.92);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
 }
 
 /* Tilted Dashed Trajectory Ring (From User Image) */
@@ -235,16 +253,21 @@
   width: calc(var(--orb-size) * 1.32);
   height: calc(var(--orb-size) * 1.32);
   border-radius: 50%;
-  border: 2px dashed #cdff00;
+  border: 2px dashed #00ff66;
   transform: rotate(-25deg) scaleY(0.7);
-  box-shadow: 0 0 calc(var(--orb-size) * 0.08) rgba(205, 255, 0, 0.45);
+  box-shadow: 0 0 calc(var(--orb-size) * 0.08) rgba(30, 255, 0, 0.3);
   pointer-events: none;
   animation: dashedSpin 20s linear infinite;
 }
 
 @keyframes dashedSpin {
-  0% { transform: rotate(-25deg) scaleY(0.7) rotate(0deg); }
-  100% { transform: rotate(-25deg) scaleY(0.7) rotate(360deg); }
+  0% {
+    transform: rotate(-25deg) scaleY(0.7) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-25deg) scaleY(0.7) rotate(360deg);
+  }
 }
 
 /* Dark Outer Eclipse Ring (From User Image) */
@@ -254,9 +277,9 @@
   height: calc(var(--orb-size) * 0.94);
   border-radius: 50%;
   border: calc(var(--orb-size) * 0.05) solid #000000;
-  box-shadow: 
-    0 0 0 2px rgba(205, 255, 0, 0.8),
-    0 0 calc(var(--orb-size) * 0.12) rgba(205, 255, 0, 0.6);
+  box-shadow:
+    0 0 0 2px rgba(30, 255, 0, 0.3),
+    0 0 calc(var(--orb-size) * 0.12) rgba(30, 255, 0, 0.3);
   pointer-events: none;
   z-index: 3;
 }
@@ -267,16 +290,14 @@
   width: calc(var(--orb-size) * 0.84);
   height: calc(var(--orb-size) * 0.84);
   border-radius: 50%;
-  background: radial-gradient(
-    circle at 45% 42%,
-    #ffffff 0%,
-    #f2ff66 18%,
-    #cdff00 45%,
-    #7ca300 80%,
-    #172400 100%
-  );
-  box-shadow: 
-    0 0 calc(var(--orb-size) * 0.18) rgba(205, 255, 0, 0.9),
+  background: radial-gradient(circle at 45% 42%,
+      #ffffff 0%,
+      #f2ff66 18%,
+      #33ff00 45%,
+      #00a336 80%,
+      #172400 100%);
+  box-shadow:
+    0 0 calc(var(--orb-size) * 0.18) rgba(30, 255, 0, 0.3),
     inset 0 0 calc(var(--orb-size) * 0.14) rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
@@ -287,8 +308,8 @@
 
 .orbStage:hover .limeSphere {
   transform: scale(1.08);
-  box-shadow: 
-    0 0 calc(var(--orb-size) * 0.28) rgba(205, 255, 0, 1),
+  box-shadow:
+    0 0 calc(var(--orb-size) * 0.28) rgba(30, 255, 0, 0.3),
     0 0 calc(var(--orb-size) * 0.4) rgba(0, 240, 255, 0.5);
 }
 
@@ -299,7 +320,7 @@
   height: calc(var(--orb-size) * 0.24);
   border-radius: 50%;
   background: #000000;
-  box-shadow: 
+  box-shadow:
     0 0 calc(var(--orb-size) * 0.08) rgba(0, 0, 0, 0.95),
     inset 0 0 calc(var(--orb-size) * 0.03) rgba(255, 255, 255, 0.3);
   display: flex;
@@ -325,20 +346,30 @@
   width: calc(var(--orb-size) * 0.38);
   height: calc(var(--orb-size) * 0.14);
   border-radius: 50%;
-  border: 1.5px solid rgba(205, 255, 0, 0.95);
-  box-shadow: 0 0 8px rgba(205, 255, 0, 0.8);
+  border: 1.5px solid rgba(30, 255, 0, 0.3);
+  box-shadow: 0 0 8px rgba(30, 255, 0, 0.3);
   transform: rotate(50deg);
   animation: atomSpin2 7s linear infinite reverse;
 }
 
 @keyframes atomSpin1 {
-  0% { transform: rotate(-15deg) rotateZ(0deg); }
-  100% { transform: rotate(-15deg) rotateZ(360deg); }
+  0% {
+    transform: rotate(-15deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotate(-15deg) rotateZ(360deg);
+  }
 }
 
 @keyframes atomSpin2 {
-  0% { transform: rotate(50deg) rotateZ(0deg); }
-  100% { transform: rotate(50deg) rotateZ(360deg); }
+  0% {
+    transform: rotate(50deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotate(50deg) rotateZ(360deg);
+  }
 }
 
 /* Tech HUD Badge Under Center Orb */
@@ -350,10 +381,10 @@
   font-weight: 800;
   letter-spacing: 0.15em;
   color: #000000;
-  background: #cdff00;
+  background: #00ff66;
   padding: 2px clamp(8px, 2vw, 12px);
   border-radius: 999px;
-  box-shadow: 0 0 16px rgba(205, 255, 0, 0.5);
+  box-shadow: 0 0 16px rgba(30, 255, 0, 0.3);
   white-space: nowrap;
 }
 
@@ -375,7 +406,7 @@
   inset: 0;
   border-radius: 50%;
   border: 1px solid rgba(205, 255, 0, 0.15);
-  box-shadow: 
+  box-shadow:
     inset 0 0 30px rgba(205, 255, 0, 0.03),
     0 0 30px rgba(205, 255, 0, 0.03);
 }
@@ -393,8 +424,13 @@
 }
 
 @keyframes orbitSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Satellite Card Node */
@@ -418,8 +454,13 @@
 }
 
 @keyframes cardCounterSpin {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(-360deg); }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
 }
 
 /* ── Desktop Default Satellite Card ─────────────────────────── */
@@ -429,10 +470,10 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 3px solid #cdff00;
+  border-left: 3px solid #00ff66;
   border-radius: 12px;
   padding: clamp(8px, 1.2vw, 12px) clamp(10px, 1.4vw, 14px);
-  box-shadow: 
+  box-shadow:
     0 12px 32px rgba(0, 0, 0, 0.8),
     0 0 16px rgba(0, 0, 0, 0.5);
   display: flex;
@@ -450,16 +491,16 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, #cdff00 0%, transparent 60%);
+  background: linear-gradient(90deg, #00ff66 0%, transparent 60%);
   opacity: 0.5;
 }
 
 .satelliteNode:hover .satelliteCard {
   transform: scale(1.08);
-  border-color: rgba(205, 255, 0, 0.5);
-  border-left-color: #cdff00;
+  border-color: rgba(30, 255, 0, 0.3);
+  border-left-color: #00ff66;
   background: rgba(18, 22, 32, 0.95);
-  box-shadow: 
+  box-shadow:
     0 16px 42px rgba(0, 0, 0, 0.9),
     0 0 30px rgba(205, 255, 0, 0.28);
 }
@@ -475,8 +516,8 @@
   height: clamp(26px, 2.5vw, 32px);
   border-radius: 8px;
   background: rgba(205, 255, 0, 0.1);
-  border: 1px solid rgba(205, 255, 0, 0.3);
-  color: #cdff00;
+  border: 1px solid rgba(30, 255, 0, 0.3);
+  color: #00ff66;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -486,7 +527,7 @@
 
 .satelliteNode:hover .iconWrap {
   transform: rotate(-10deg) scale(1.15);
-  background: #cdff00;
+  background: #00ff66;
   color: #000000;
 }
 
@@ -527,7 +568,7 @@
   font-size: clamp(0.56rem, 0.9vw, 0.64rem);
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #cdff00;
+  color: #00ff66;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -557,14 +598,14 @@
 .hatchLine {
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #cdff00);
+  background: linear-gradient(90deg, transparent, #00ff66);
   transform: skewX(-45deg);
 }
 
 .cornerText {
   font-family: 'Space Grotesk', monospace;
   font-size: 0.55rem;
-  color: #cdff00;
+  color: #00ff66;
   letter-spacing: 0.2em;
 }
 
@@ -582,7 +623,7 @@
 .gridCard {
   background: rgba(12, 14, 20, 0.88);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-top: 2px solid #cdff00;
+  border-top: 2px solid #00ff66;
   border-radius: 12px;
   padding: 16px;
   cursor: pointer;
@@ -597,7 +638,7 @@
 .gridCard:hover {
   transform: translateY(-4px);
   background: rgba(18, 22, 32, 0.95);
-  border-color: rgba(205, 255, 0, 0.4);
+  border-color: rgba(30, 255, 0, 0.3);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(205, 255, 0, 0.15);
 }
 
@@ -610,9 +651,12 @@
   .orbitArena {
     --arena-size: min(84vw, calc(100vh - 220px), 500px);
   }
+
   .cardSubtitle {
-    display: none; /* Hide subtitle for neatness */
+    display: none;
+    /* Hide subtitle for neatness */
   }
+
   .satelliteCard {
     width: clamp(120px, 14vw, 150px);
     padding: 8px 10px;
@@ -669,9 +713,9 @@
     padding: 0;
     align-items: center;
     justify-content: center;
-    border: 1.5px solid rgba(205, 255, 0, 0.4);
+    border: 1.5px solid rgba(30, 255, 0, 0.3);
     background: rgba(10, 12, 18, 0.94);
-    box-shadow: 0 0 14px rgba(205, 255, 0, 0.25);
+    box-shadow: 0 0 14px rgba(30, 255, 0, 0.3);
   }
 
   .satelliteCard::before {
@@ -710,12 +754,12 @@
     font-size: 0.52rem;
     font-weight: 700;
     letter-spacing: 0.08em;
-    color: #cdff00;
+    color: #00ff66;
     background: rgba(0, 0, 0, 0.85);
     padding: 1px 4px;
     border-radius: 3px;
     white-space: nowrap;
-    border: 1px solid rgba(205, 255, 0, 0.2);
+    border: 1px solid rgba(30, 255, 0, 0.3);
     pointer-events: none;
   }
 
@@ -723,7 +767,7 @@
   .satelliteNode:active .satelliteCard,
   .satelliteNode:hover .satelliteCard {
     transform: scale(1.15);
-    border-color: #cdff00;
-    box-shadow: 0 0 18px rgba(205, 255, 0, 0.6);
+    border-color: #00ff66;
+    box-shadow: 0 0 18px rgba(30, 255, 0, 0.3);
   }
 }

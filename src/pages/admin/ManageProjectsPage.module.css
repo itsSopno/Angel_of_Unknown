@@ -28,7 +28,7 @@
 }
 
 .accent {
-  color: #cdff00;
+  color: #00ff66;
 }
 
 .subtitle {
@@ -41,7 +41,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #cdff00;
+  background: #00ff66;
   color: #000000;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
@@ -51,13 +51,13 @@
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 0 15px rgba(205, 255, 0, 0.3);
+  box-shadow: 0 0 15px rgba(30, 255, 0, 0.3);
 }
 
 .createBtn:hover {
-  background: #e2ff4f;
+  background: #00ff66;
   transform: translateY(-2px);
-  box-shadow: 0 0 25px rgba(205, 255, 0, 0.5);
+  box-shadow: 0 0 25px rgba(30, 255, 0, 0.3);
 }
 
 /* Modal Drawer / Form */
@@ -75,7 +75,7 @@
 
 .modalContent {
   background: #090d14;
-  border: 1px solid rgba(205, 255, 0, 0.3);
+  border: 1px solid rgba(30, 255, 0, 0.3);
   border-radius: 12px;
   width: 100%;
   max-width: 760px;
@@ -138,7 +138,9 @@
   text-transform: uppercase;
 }
 
-.input, .textarea, .select {
+.input,
+.textarea,
+.select {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 6px;
@@ -150,8 +152,10 @@
   transition: border-color 0.2s;
 }
 
-.input:focus, .textarea:focus, .select:focus {
-  border-color: #cdff00;
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-color: #00ff66;
   box-shadow: 0 0 10px rgba(205, 255, 0, 0.2);
 }
 
@@ -169,7 +173,7 @@
 }
 
 .checkboxGroup input {
-  accent-color: #cdff00;
+  accent-color: #00ff66;
   width: 18px;
   height: 18px;
   cursor: pointer;
@@ -201,7 +205,7 @@
 }
 
 .saveBtn {
-  background: #cdff00;
+  background: #00ff66;
   border: none;
   color: #000000;
   padding: 10px 24px;
@@ -213,7 +217,7 @@
 }
 
 .saveBtn:hover {
-  background: #e2ff4f;
+  background: #00ff66;
   transform: translateY(-2px);
 }
 
@@ -236,7 +240,7 @@
 
 .projectCard:hover {
   transform: translateY(-4px);
-  border-color: rgba(205, 255, 0, 0.4);
+  border-color: rgba(30, 255, 0, 0.3);
 }
 
 .cardImageWrap {
@@ -258,7 +262,7 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  background: rgba(205, 255, 0, 0.95);
+  background: rgba(30, 255, 0, 0.3);
   color: #000000;
   font-size: 0.7rem;
   font-weight: 800;
@@ -349,7 +353,7 @@
 }
 
 .linkIcon:hover {
-  color: #cdff00;
+  color: #00ff66;
 }
 
 .cardActions {
@@ -357,7 +361,8 @@
   gap: 8px;
 }
 
-.editBtn, .deleteBtn {
+.editBtn,
+.deleteBtn {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 6px 10px;
@@ -386,7 +391,8 @@
 }
 
 /* Empty & Loading states */
-.loadingState, .emptyState {
+.loadingState,
+.emptyState {
   text-align: center;
   padding: 60px 20px;
   background: rgba(255, 255, 255, 0.02);
@@ -399,12 +405,14 @@
   width: 36px;
   height: 36px;
   border: 3px solid rgba(205, 255, 0, 0.2);
-  border-top-color: #cdff00;
+  border-top-color: #00ff66;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
   margin: 0 auto 16px;
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
