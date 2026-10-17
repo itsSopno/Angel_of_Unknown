@@ -14,7 +14,7 @@
 .gridOverlay {
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     radial-gradient(circle at 50% 50%, rgba(205, 255, 0, 0.08) 0%, transparent 60%),
     linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
@@ -30,10 +30,10 @@
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-top: 2px solid #cdff00;
+  border-top: 2px solid #00ff66;
   border-radius: 16px;
   padding: 40px 32px;
-  box-shadow: 
+  box-shadow:
     0 24px 60px rgba(0, 0, 0, 0.9),
     0 0 35px rgba(205, 255, 0, 0.1);
   display: flex;
@@ -55,8 +55,8 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: radial-gradient(circle at 40% 40%, #ffffff 0%, #cdff00 45%, #182800 100%);
-  box-shadow: 0 0 25px rgba(205, 255, 0, 0.8);
+  background: radial-gradient(circle at 40% 40%, #ffffff 0%, #00ff66 45%, #182800 100%);
+  box-shadow: 0 0 25px rgba(30, 255, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,8 +74,13 @@
 }
 
 @keyframes spinRing {
-  0% { transform: rotate(-25deg) rotateZ(0deg); }
-  100% { transform: rotate(-25deg) rotateZ(360deg); }
+  0% {
+    transform: rotate(-25deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotate(-25deg) rotateZ(360deg);
+  }
 }
 
 .shieldIcon {
@@ -152,15 +157,15 @@
 }
 
 .input:focus {
-  border-color: #cdff00;
-  box-shadow: 0 0 12px rgba(205, 255, 0, 0.25);
+  border-color: #00ff66;
+  box-shadow: 0 0 12px rgba(30, 255, 0, 0.3);
 }
 
 .submitBtn {
   margin-top: 8px;
   width: 100%;
   padding: 13px;
-  background: #cdff00;
+  background: #00ff66;
   color: #000000;
   border: none;
   border-radius: 8px;
@@ -177,8 +182,8 @@
 }
 
 .submitBtn:hover {
-  background: #dbff33;
-  box-shadow: 0 0 20px rgba(205, 255, 0, 0.45);
+  background: #00ff66;
+  box-shadow: 0 0 20px rgba(30, 255, 0, 0.3);
   transform: translateY(-1px);
 }
 
@@ -209,8 +214,8 @@
   width: 100%;
   padding: 11px;
   background: rgba(205, 255, 0, 0.08);
-  border: 1px dashed rgba(205, 255, 0, 0.4);
-  color: #cdff00;
+  border: 1px dashed rgba(30, 255, 0, 0.3);
+  color: #00ff66;
   border-radius: 8px;
   font-family: 'Space Grotesk', monospace;
   font-size: 0.74rem;
@@ -226,8 +231,8 @@
 
 .demoBtn:hover {
   background: rgba(205, 255, 0, 0.16);
-  border-color: #cdff00;
-  box-shadow: 0 0 16px rgba(205, 255, 0, 0.2);
+  border-color: #00ff66;
+  box-shadow: 0 0 16px rgba(30, 255, 0, 0.3);
 }
 
 .backHome {
