@@ -364,9 +364,9 @@
   font-size: 0.58rem;
   font-weight: 800;
   letter-spacing: 0.12em;
-  color: #cdff00;
+  color: #00ff66;
   background: rgba(0, 0, 0, 0.85);
-  border: 1px solid rgba(205, 255, 0, 0.4);
+  border: 1px solid rgba(30, 255, 0, 0.3);
   padding: 1px 5px;
   border-radius: 4px;
   pointer-events: none;
@@ -426,7 +426,7 @@
     height: 64px;
     border-radius: 50%;
     background: #030408;
-    border: 1.5px solid rgba(205, 255, 0, 0.6);
+    border: 1.5px solid rgba(30, 255, 0, 0.3);
     cursor: pointer;
     z-index: 20;
     display: flex;
@@ -434,7 +434,7 @@
     justify-content: center;
     box-shadow:
       0 8px 30px rgba(0, 0, 0, 0.9),
-      0 0 25px rgba(205, 255, 0, 0.35);
+      0 0 25px rgba(30, 255, 0, 0.25);
     outline: none;
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease;
   }
@@ -454,7 +454,7 @@
     position: absolute;
     inset: -6px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(205, 255, 0, 0.4) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(30, 255, 0, 0.3) 0%, transparent 70%);
     filter: blur(6px);
     animation: auraBreath 2.5s infinite ease-in-out alternate;
   }
@@ -464,7 +464,7 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #ffffff 0%, #cdff00 45%, #082900 85%, #000000 100%);
+    background: radial-gradient(circle at 35% 35%, #ffffff 0%, #00ff66 45%, #082900 85%, #000000 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -528,7 +528,7 @@
     position: absolute;
     inset: -12px;
     border-radius: 50%;
-    border: 1px dashed rgba(205, 255, 0, 0.5);
+    border: 1px dashed rgba(30, 255, 0, 0.3);
     animation: spinRing3 10s linear infinite;
     pointer-events: none;
   }
@@ -554,7 +554,7 @@
     background: rgba(14, 16, 22, 0.92);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(205, 255, 0, 0.3);
+    border: 1px solid rgba(30, 255, 0, 0.3);
     color: #e2e8f0;
     display: flex;
     align-items: center;
@@ -584,8 +584,8 @@
 
   .radialItem.radialActive {
     background: rgba(205, 255, 0, 0.15);
-    border-color: #cdff00;
-    color: #cdff00;
+    border-color: #00ff66;
+    color: #00ff66;
     box-shadow: 0 0 20px rgba(205, 255, 0, 0.4);
   }
 
@@ -612,7 +612,7 @@
     font-size: 0.62rem;
     font-weight: 700;
     letter-spacing: 0.08em;
-    color: #cdff00;
+    color: #00ff66;
     background: rgba(0, 0, 0, 0.9);
     padding: 1px 6px;
     border-radius: 4px;
