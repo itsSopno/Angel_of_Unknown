@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { FiHome, FiUser, FiCpu, FiBriefcase, FiMail, FiShield, FiX } from 'react-icons/fi';
+import { FiHome, FiUser, FiBriefcase, FiMail, FiShield, FiX } from 'react-icons/fi';
 import styles from './OrbNavbar.module.css';
 
 const NAV_ITEMS = [
   { id: 'home', label: 'HOME', icon: FiHome, path: '/#home', isSection: true },
   { id: 'about', label: 'ABOUT', icon: FiUser, path: '/#about', isSection: true },
-  { id: 'skills', label: 'SKILLS', icon: FiCpu, path: '/#skills', isSection: true },
   { id: 'projects', label: 'PROJECTS', icon: FiBriefcase, path: '/#projects', isSection: true },
   { id: 'contact', label: 'CONTACT', icon: FiMail, path: '/#contact', isSection: true },
 ];
@@ -30,7 +29,7 @@ export default function OrbNavbar() {
       setIsScrolled(window.scrollY > 80);
 
       // Scroll spy for sections
-      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+      const sections = ['home', 'about', 'projects', 'contact'];
       const scrollPosition = window.scrollY + 250;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -84,7 +83,7 @@ export default function OrbNavbar() {
       {/* ── DESKTOP ORB DOCK ──────────────────────────────────── */}
       <div className={styles.dockWrapper}>
         <div className={styles.dockBar}>
-          
+
           {/* Left Wing Nav Items */}
           <div className={styles.dockWing}>
             {NAV_ITEMS.slice(0, 2).map((item) => {
@@ -124,7 +123,7 @@ export default function OrbNavbar() {
               <div className={`${styles.ring} ${styles.ring1}`} />
               <div className={`${styles.ring} ${styles.ring2}`} />
               <div className={`${styles.ring} ${styles.ring3}`} />
-              
+
               {/* Core Nucleus */}
               <div className={styles.nucleus}>
                 <div className={styles.nucleusInner} />
@@ -136,7 +135,7 @@ export default function OrbNavbar() {
                 <div className={styles.satelliteBeacon} />
               </div>
             </div>
-            
+
             <div className={styles.coreBadge}>
               <span>MERN</span>
             </div>
@@ -181,8 +180,8 @@ export default function OrbNavbar() {
       <div className={styles.mobileOrbContainer}>
         {/* Backdrop overlay when open */}
         {isOpenMobile && (
-          <div 
-            className={styles.mobileBackdrop} 
+          <div
+            className={styles.mobileBackdrop}
             onClick={() => setIsOpenMobile(false)}
           />
         )}
@@ -241,7 +240,7 @@ export default function OrbNavbar() {
           aria-label="Toggle navigation menu"
         >
           <div className={styles.mobileOrbGlow} />
-          
+
           <div className={styles.mobileOrbSphere}>
             {isOpenMobile ? (
               <FiX className={styles.closeIcon} />
@@ -253,7 +252,7 @@ export default function OrbNavbar() {
               </div>
             )}
           </div>
-          
+
           <span className={styles.mobileOrbRingPulse} />
         </button>
       </div>
