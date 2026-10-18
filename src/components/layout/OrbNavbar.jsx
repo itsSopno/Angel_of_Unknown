@@ -169,7 +169,7 @@ export default function OrbNavbar() {
               aria-label="Admin Portal"
             >
               <FiShield className={styles.navIcon} />
-              <span className={styles.navLabel}>PORTAL</span>
+              <span className={styles.navLabel}>ORB</span>
             </button>
           </div>
 
