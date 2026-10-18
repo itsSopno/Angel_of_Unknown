@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import OrbNavbar from './OrbNavbar';
+import Footer from './Footer';
 
 const PublicLayout = () => {
   return (
@@ -9,6 +10,7 @@ const PublicLayout = () => {
         <Outlet />
       </main>
       {/* Footer এখানে আসবে */}
+      <Footer></Footer>
     </div>
   );
 };
