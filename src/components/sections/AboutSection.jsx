@@ -3,7 +3,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './AboutSection.module.css';
-
+import image from '../sections/image.jpg'
 gsap.registerPlugin(ScrollTrigger);
 
 const SKILLS = [
@@ -13,17 +13,17 @@ const SKILLS = [
 ];
 
 const LINKS = [
-  { label: 'Email',    href: 'mailto:nabil@example.com' },
+  { label: 'Email', href: 'mailto:nabil@example.com' },
   { label: 'LinkedIn', href: 'https://linkedin.com' },
-  { label: 'GitHub',   href: 'https://github.com/itsSopno' },
+  { label: 'GitHub', href: 'https://github.com/itsSopno' },
 ];
 
 export default function AboutSection() {
-  const sectionRef  = useRef(null);
-  const introRef    = useRef(null);
-  const leftRef     = useRef(null);
-  const rightRef    = useRef(null);
-  const skillsRef   = useRef(null);
+  const sectionRef = useRef(null);
+  const introRef = useRef(null);
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
+  const skillsRef = useRef(null);
 
   useGSAP(() => {
     // "INTRO" heading
@@ -127,11 +127,22 @@ export default function AboutSection() {
         </div>
 
         {/* ── RIGHT — Photo ── */}
+
         <div className={styles.right} ref={rightRef}>
           <div className={styles.photoWrap}>
             <div className={styles.photoPlaceholder}>
+              <img
+                src={image}
+                alt="Nabil Hasan Alamin"
+                className={styles.profileImage}
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
+              />
+
               <span className={styles.photoInitials}>NH</span>
             </div>
+
             {/* Corner accents */}
             <div className={styles.cornerTL} />
             <div className={styles.cornerBR} />

@@ -97,8 +97,7 @@ export default function Footer() {
                 {/* ── Bottom ───────────────────────────────────────── */}
                 <div className={styles.bottomRow}>
                     <p className={styles.copyright}>
-                        © {new Date().getFullYear()} Nabil Hasan. Built with{' '}
-                        <span className={styles.copyrightAccent}>♥</span> & MERN Stack.
+                        © {new Date().getFullYear()} Angel of Unknown
                     </p>
                     <button className={styles.backToTop} onClick={backToTop}>
                         <FiArrowUp className={styles.topArrow} />

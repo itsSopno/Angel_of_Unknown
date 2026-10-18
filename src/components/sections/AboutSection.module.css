@@ -155,12 +155,12 @@
 .photoWrap {
   position: relative;
   width: 100%;
+  max-width: 340px;
 }
 
-/* actual photo - replace .photoPlaceholder with img tag when ready */
 .photoPlaceholder {
   width: 100%;
-  aspect-ratio: 3 / 4.2;
+  aspect-ratio: 3 / 4;
   background: #0e0e0e;
   border: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
@@ -168,6 +168,22 @@
   justify-content: center;
   overflow: hidden;
   filter: grayscale(1);
+  position: relative;
+}
+
+.profileImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.profileImage:hover {
+  transform: scale(1.03);
 }
 
 .photoInitials {
@@ -175,27 +191,29 @@
   font-size: 4rem;
   color: rgba(255, 255, 255, 0.06);
   letter-spacing: 0.1em;
+  position: relative;
+  z-index: 1;
 }
 
 /* Corner lime accents */
 .cornerTL,
 .cornerBR {
   position: absolute;
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   border-color: #00ff66;
   border-style: solid;
 }
 
 .cornerTL {
-  top: -5px;
-  left: -5px;
+  top: -6px;
+  left: -6px;
   border-width: 2px 0 0 2px;
 }
 
 .cornerBR {
-  bottom: -5px;
-  right: -5px;
+  bottom: -6px;
+  right: -6px;
   border-width: 0 2px 2px 0;
 }
 
@@ -215,7 +233,7 @@
   }
 
   .photoWrap {
-    max-width: 180px;
+    max-width: 220px;
   }
 
   .introTitle {
