@@ -344,16 +344,15 @@ export default function ProjectSection() {
             </div>
 
             <div className={styles.fullModalActions}>
-              {activeModalProject.liveUrl && (
-                <a
-                  href={activeModalProject.liveUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.actionBtn}
-                >
-                  VISIT LIVE PRODUCTION <FiExternalLink />
-                </a>
-              )}
+              <button
+                className={styles.actionBtn}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  navigate(`/projects/${activeModalProject.slug || activeModalProject._id}`);
+                }}
+              >
+                DETAIL <FiArrowRight />
+              </button>
               {activeModalProject.githubClient && (
                 <a
                   href={activeModalProject.githubClient}
