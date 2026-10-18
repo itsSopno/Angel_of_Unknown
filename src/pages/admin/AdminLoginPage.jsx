@@ -101,10 +101,10 @@ export default function AdminLoginPage() {
           <span>OR QUICK PREVIEW</span>
         </div>
 
-        {/* Quick Demo Access Button */}
+        {/* Quick Demo Access Button
         <button onClick={handleDemoAccess} className={styles.demoBtn}>
           <FiZap /> INSTANT DEMO ACCESS (ONE-CLICK)
-        </button>
+        </button> */}
 
         <a href="/" className={styles.backHome}>
           ← RETURN TO PUBLIC PORTFOLIO
