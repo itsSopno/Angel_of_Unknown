@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { FiHome, FiUser, FiBriefcase, FiMail, FiShield, FiX } from 'react-icons/fi';
+import { FiHome, FiUser, FiBriefcase, FiMail, FiShield, FiX, FiLayers } from 'react-icons/fi';
 import styles from './OrbNavbar.module.css';
 
 const NAV_ITEMS = [
@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { id: 'about', label: 'ABOUT', icon: FiUser, path: '/#about', isSection: true },
   { id: 'projects', label: 'PROJECTS', icon: FiBriefcase, path: '/#projects', isSection: true },
   { id: 'contact', label: 'CONTACT', icon: FiMail, path: '/#contact', isSection: true },
+  { id: 'all-projects', label: 'ALL PROJECTS', icon: FiLayers, path: '/all-projects', isSection: false },
 ];
 
 export default function OrbNavbar() {
@@ -51,6 +52,13 @@ export default function OrbNavbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isPublicPage, location.pathname]);
 
+  /* ── Sync active state with route ──────────────────────────── */
+  useEffect(() => {
+    if (location.pathname === '/all-projects') {
+      setActiveSection('all-projects');
+    }
+  }, [location.pathname]);
+
   /* ── Smooth Navigation ────────────────────────────────────── */
   const handleNavClick = (item) => {
     setIsOpenMobile(false);
@@ -75,6 +83,7 @@ export default function OrbNavbar() {
       setActiveSection(item.id);
     } else {
       navigate(item.path);
+      setActiveSection(item.id);
     }
   };
 

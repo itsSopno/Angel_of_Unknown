@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { 
-  FiFolder, 
-  FiCpu, 
-  FiMail, 
-  FiGlobe, 
-  FiActivity, 
-  FiPlay, 
-  FiPause, 
-  FiGrid, 
+import {
+  FiFolder,
+  FiCpu,
+  FiMail,
+  FiGlobe,
+  FiActivity,
+  FiPlay,
+  FiPause,
+  FiGrid,
   FiCompass,
-  FiArrowRight
+  FiArrowRight,
+  FiArchive
 } from 'react-icons/fi';
 import styles from './DashboardPage.module.css';
 
@@ -23,6 +24,15 @@ const ADMIN_ROUTES = [
     path: '/admin/projects',
     icon: FiFolder,
     accent: '#cdff00',
+  },
+  {
+    id: 'allprojects',
+    title: 'ALL PROJECTS',
+    subtitle: 'Document every project with full breakdown',
+    badge: 'ARCHIVE',
+    path: '/admin/all-projects',
+    icon: FiArchive,
+    accent: '#ff9f00',
   },
   {
     id: 'skills',
@@ -150,7 +160,7 @@ export default function DashboardPage() {
       {/* ── VIEW 1: 3D ORBITAL COMMAND ARENA ───────────────────── */}
       {viewMode === 'orbit' ? (
         <div className={styles.orbitArena}>
-          
+
           {/* Radar background circles & crosshairs */}
           <div className={styles.radarGrid}>
             <div className={styles.radarCircle1} />
@@ -161,7 +171,7 @@ export default function DashboardPage() {
           </div>
 
           {/* ── CENTRAL MAIN ORB (MATCHING USER'S IMAGE) ─────────── */}
-          <div 
+          <div
             className={styles.orbStage}
             onClick={() => setIsPaused(!isPaused)}
             title="Central Quantum Core - Click to Toggle Orbit"
@@ -219,7 +229,7 @@ export default function DashboardPage() {
                   >
                     <div className={styles.satelliteCard}>
                       <div className={styles.cardHead}>
-                        <div 
+                        <div
                           className={styles.iconWrap}
                           style={{ borderColor: route.accent, color: route.accent }}
                         >
@@ -274,7 +284,7 @@ export default function DashboardPage() {
                 tabIndex={0}
               >
                 <div className={styles.cardHead}>
-                  <div 
+                  <div
                     className={styles.iconWrap}
                     style={{ borderColor: route.accent, color: route.accent }}
                   >

@@ -22,3 +22,10 @@ export const deleteMessage = (id) => api.delete(`/contact/contact/${id}`);
 export const loginAdmin = (data) => api.post('/auth/login', data);
 export const getProfile = () => api.get('/auth/me');
 export const changePassword = (data) => api.put('/auth/change-password', data);
+
+// ── All Projects ──────────────────────────────────────
+export const getAllProjects = (params) => api.get('/allprojects', { params });
+export const getAllProjectById = (id) => api.get(`/allprojects/${id}`);
+export const createAllProject = (data) => api.post('/allprojects', data);
+export const updateAllProject = (id, data) => api.put(`/allprojects/${id}`, data);
+export const deleteAllProject = (id) => api.delete(`/allprojects/${id}`);

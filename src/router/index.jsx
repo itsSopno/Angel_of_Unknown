@@ -11,6 +11,7 @@ import ProtectedRoute from '../components/common/ProtectedRoute';
 import HomePage from '../pages/public/HomePage';
 import NotFoundPage from '../pages/public/NotFoundPage';
 import ProjectDetailPage from '../pages/public/ProjectDetailPage';
+import AllProjectsPage from '../pages/public/AllProjectsPage';
 
 // Admin Pages
 import AdminLoginPage from '../pages/admin/AdminLoginPage';
@@ -18,6 +19,7 @@ import DashboardPage from '../pages/admin/DashboardPage';
 import ManageProjectsPage from '../pages/admin/ManageProjectsPage';
 import ManageSkillsPage from '../pages/admin/ManageSkillsPage';
 import MessagesPage from '../pages/admin/MessagesPage';
+import ManageAllProjectsPage from '../pages/admin/ManageAllProjectsPage';
 
 const router = createBrowserRouter([
   // ── Public Routes ───────────────────────────────
@@ -26,6 +28,7 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <HomePage /> },
       { path: '/projects/:slug', element: <ProjectDetailPage /> },
+      { path: '/all-projects', element: <AllProjectsPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
   },
@@ -42,6 +45,7 @@ const router = createBrowserRouter([
         children: [
           { path: '/admin/dashboard', element: <DashboardPage /> },
           { path: '/admin/projects', element: <ManageProjectsPage /> },
+          { path: '/admin/all-projects', element: <ManageAllProjectsPage /> },
           { path: '/admin/skills', element: <ManageSkillsPage /> },
           { path: '/admin/messages', element: <MessagesPage /> },
         ],
