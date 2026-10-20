@@ -30,7 +30,7 @@ const INITIAL_FORM = {
     githubUrl: '',
 };
 
-const PROJECT_TYPES = ['Web', 'Mobile', 'Desktop', 'API', 'AI/ML', 'Other'];
+const PROJECT_TYPES = ['all', 'Frontend', 'Backend-API', 'MERN', 'Full-Stack', 'MCP', 'Other'];
 
 export default function ManageAllProjectsPage() {
     const [projects, setProjects] = useState([]);

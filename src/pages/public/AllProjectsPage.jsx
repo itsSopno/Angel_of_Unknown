@@ -4,7 +4,7 @@ import { FiExternalLink, FiGithub, FiSearch, FiLayers } from 'react-icons/fi';
 import { getAllProjects } from '../../services/portfolioService';
 import styles from './AllProjectsPage.module.css';
 
-const PROJECT_TYPES = ['all', 'Web', 'Mobile', 'Desktop', 'API', 'AI/ML', 'Other'];
+const PROJECT_TYPES = ['all', 'Frontend', 'Backend-API', 'MERN', 'Full-Stack', 'MCP', 'Other'];
 
 export default function AllProjectsPage() {
     const [projects, setProjects] = useState([]);
