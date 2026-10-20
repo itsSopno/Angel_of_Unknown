@@ -65,6 +65,8 @@
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 28px;
+    background-color: #000;
+    color: #cbd5e1;
 }
 
 .filterBtn {

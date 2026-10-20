@@ -12,6 +12,7 @@ import HomePage from '../pages/public/HomePage';
 import NotFoundPage from '../pages/public/NotFoundPage';
 import ProjectDetailPage from '../pages/public/ProjectDetailPage';
 import AllProjectsPage from '../pages/public/AllProjectsPage';
+import AllProjectDetailPage from '../pages/public/AllProjectDetailPage';
 
 // Admin Pages
 import AdminLoginPage from '../pages/admin/AdminLoginPage';
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       { path: '/', element: <HomePage /> },
       { path: '/projects/:slug', element: <ProjectDetailPage /> },
       { path: '/all-projects', element: <AllProjectsPage /> },
+      { path: '/all-projects/:id', element: <AllProjectDetailPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
   },
